@@ -83,44 +83,32 @@
     </header>
 
     <main>
+
+      {% for proffy in proffys %}
+        <article class="teacher-item">
+          
+          <header>
+            <img src="{{proffy.avatar}}" height="500" alt="{{proffy.name}}">
+            <div>
+              <strong>{{proffy.name}}</strong>
+              <span>{{proffy.subject}}</span>
+            </div>
+          </header>
+
+          <p>{{proffy.bio}}</p>
+
+          <footer>
+            <p>Preço/hora <strong>{{proffy.cost}}</strong></p>
+            <a href="https://api.whatsapp.com/send?phone=55{{proffy.whatsapp}}&text=Tenho interesse na sua aula de {{proffy.subject}} {{proffy.name}}"
+            class="button" target="_blank"><img src="/images/icons/whatsapp.svg" alt="whatsapp">Entre em contato</a>
+          </footer>
+
+        </article>
+      {%endfor%}
+
       
-      <article class="teacher-item">
-        
-        <header>
-          <img src="https://www.practicaespanol.com/wp-content/uploads/Alt-Fotograf%C3%ADa-de-Arthur-Sasse-de-la-instant%C3%A1nea-de-Albert-Einstein-EFE.jpg" height="500" alt="Albert Einstein">
-          <div>
-            <strong>Albert Einstein</strong>
-            <span>Física</span>
-          </div>
-        </header>
+    
 
-        <p>Duas coisas são infinitas: o universo e a estupidez humana. Mas, em relação ao universo, ainda não tenho certeza absoluta. Me da uns 10 conto te ensino umas coisas ai sobre a relatividade</p>
-
-        <footer>
-          <p>Preço/hora <strong>R$10,00</strong></p>
-          <button type="button"><img src="/images/icons/whatsapp.svg" alt="whatsapp">Entrar em contato</button>
-        </footer>
-
-      </article>
-
-      <article class="teacher-item">
-        
-        <header>
-          <img src="https://www.practicaespanol.com/wp-content/uploads/Alt-Fotograf%C3%ADa-de-Arthur-Sasse-de-la-instant%C3%A1nea-de-Albert-Einstein-EFE.jpg" height="500" alt="Albert Einstein">
-          <div>
-            <strong>Albert Einstein</strong>
-            <span>Física</span>
-          </div>
-        </header>
-
-        <p>Duas coisas são infinitas: o universo e a estupidez humana. Mas, em relação ao universo, ainda não tenho certeza absoluta. Me da uns 10 conto te ensino umas coisas ai sobre a relatividade</p>
-
-        <footer>
-          <p>Preço/hora <strong>R$10,00</strong></p>
-          <button type="button"><img src="/images/icons/whatsapp.svg" alt="whatsapp">Entrar em contato</button>
-        </footer>
-
-      </article>
     
     </main>
 
