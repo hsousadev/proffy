@@ -29,6 +29,16 @@ const subjects = [
   "Química",
 ]
 
+const weekdays = [
+  "Domingo",
+  "Segunda-feira",
+  "Terça-feira",
+  "Quarta-feira",
+  "Quinta-feira",
+  "Sexta-feira",
+  "Sábado"
+]
+
 
 function pageLanding (req, res) {
   return res.render("index.html");
@@ -36,16 +46,16 @@ function pageLanding (req, res) {
 
 function pageStudy(req, res) {
   const filters = req.query
-  return res.render("study.html", {proffys, filters});
+  return res.render("study.html", {proffys, filters, subjects, weekdays});
 }
 
 function pageGiveClass(req, res) {
-  return res.render("give-classes.html");
+  return res.render("give-classes.html", { subject, weekdays});
 }
 
 
 
-// nunjucks
+// nunjucks (template engine)
 const nunjucks = require('nunjucks');
 nunjucks.configure('src/views', {
   express: server,
