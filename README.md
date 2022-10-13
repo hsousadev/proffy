@@ -6,8 +6,6 @@ Online study platform. NLW #02 Rocketseat
 #### [🇧🇷 BR]
 Plataforma online de estudos. NLW #02 Rocketseat
 
-### Under development / Em desenvolvimento (4/5) 🚧
-
 ![Proffy_Web_Capa](https://user-images.githubusercontent.com/54003876/107502115-07bc6700-6b77-11eb-8e13-58c757a4ec94.png)
 
 ### Home
